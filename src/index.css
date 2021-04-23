@@ -1,0 +1,193 @@
+/* App Properties */
+body {
+    margin: 5;
+    font-family: sans-serif;
+}
+
+/* NavBar Prperties */
+.nav {
+    padding: 30px;
+}
+
+.dark-mode {
+    position: absolute;
+    right: 250px;
+    top: 43px;
+    background-color:#555555; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.project-collection {
+    position: absolute;
+    right: 25px;
+    top: 43px;
+    background-color: #555555; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.save-button {
+    position: absolute;
+    right: 385px;
+    top: 43px;
+    background-color: #555555; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.home-button {
+    position: absolute;
+    right: 150px;
+    top: 43px;
+    background-color: #555555; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px; 
+}
+
+.home-button:hover, .clear-button:hover, .save-button:hover, .project-collection:hover, .dark-mode:hover{
+    background-color: #175eed;
+}
+
+.clear-button {
+    position: absolute;
+    right: 475px;
+    top: 43px;
+    background-color: #555555; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px; 
+}
+
+.active {
+    background-color: #175eed;
+}
+
+/* Text Editor Properties */
+.editor-panel {
+    position: absolute;
+}
+
+.frame {
+    position: absolute;
+    background-color: #fff;
+    right: 0px;
+    margin: 1%;
+    width: 60%;
+    height: 77%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 6px 19px 4px #dfdfdf;
+}
+
+.information-container{
+    text-align: center;
+}
+
+/* cards */
+.header {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+img {
+    opacity: 1;
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.edit-buttons {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.card:hover img {
+  opacity: 0.3;
+}
+
+.card:hover .edit-buttons {
+  opacity: 1;
+}
+
+.card {
+    width: 80%;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em;
+    float: left;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.content-container {
+    width: 33%;
+    display: flex;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.edit-buttons {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.collection-header {
+    text-align: center;
+}
+
+.logo-icon{
+    color: black;
+    font-size: 61px;
+    position: absolute;
+    top: 1%;
+}
+
+.theme-filter{
+    width: 86px;
+    height:38px;
+    font-size: 16px;
+    position: absolute;
+    right: 569px;
+    top: 43px;
+    background-color: #555555;
+    color: #fff;
+    border: none;
+}
+
+
+
