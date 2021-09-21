@@ -3,7 +3,7 @@ import '../styles/navbar.css'
 import { NavLink } from "react-router-dom";
 import { GiFoundryBucket } from "react-icons/gi";
 
-function NavBar({ toggleDark, darkMode }){
+function NavBar({ currentUser, toggleDark, darkMode }){
 
     return (
         <div className="nav">

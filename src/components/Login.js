@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { loginFetch, signupFetch } from "../services/Requests"
 import '../styles/login.css'
 
-function Login() {
+function Login({ currentUser, setCurrentUser}) {
+    const [errors, setErrors] = useState([])
     const [login, setLogin] = useState({
         email: "",
         password: "",
@@ -10,13 +12,35 @@ function Login() {
     })
 
     // LOGIN HANDLER
-    function handleLogin(){
-        console.log(login)
+    function handleLogin(e){
+        e.preventDefault();
+        loginFetch(login)
+        .then(data => { 
+            setCurrentUser(data.user);
+            localStorage.setItem("token", data.token);
+            setLogin({
+                email: "", password: "", name: "", verify: ""
+            })
+        })
+        .catch(data => {
+            setErrors(data.errors);
+        })
     }
 
     // SIGNUP HANDLER
-    function handleRegister(){
-        
+    function handleSignup(e){
+        e.preventDefault();
+        signupFetch(login)
+        .then(data => { 
+            setCurrentUser(data.user);
+            localStorage.setItem("token", data.token);
+            setLogin({
+                email: "", password: "", name: "", verify: ""
+            })
+        })
+        .catch(data => {
+            setErrors(data.errors);
+        })
     }
 
     return (

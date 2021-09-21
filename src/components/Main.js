@@ -5,7 +5,7 @@ import Display from "./Display"
 
 const url = "http://localhost:3000/projects"
 
-function Main({ darkMode, selected, setSelected }){
+function Main({ currentUser, darkMode, selected, setSelected }){
     const [html, setHtml] = useLocalStorage("html", "")
     const [css, setCss] = useLocalStorage("css", "")
     const [js, setJs] = useLocalStorage("js", "")

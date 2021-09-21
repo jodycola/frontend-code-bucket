@@ -4,7 +4,7 @@ import Project from "./Project"
 
 const url = "http://localhost:3000/projects"
 
-function Collection({ selectProject, darkMode }){
+function Collection({ currentUser, selectProject, darkMode }){
     const [projects, setProjects] = useState([])
 
     // FETCH PROJECT DATA AND SET STATE
