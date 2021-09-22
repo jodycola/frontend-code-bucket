@@ -7,6 +7,10 @@ function Login({ currentUser, setCurrentUser}) {
     const [login, setLogin] = useState({
         email: "",
         password: "",
+    })
+    const [signup, setSignup] = useState({
+        email: "",
+        password: "",
         name: "",
         verify: ""
     })
@@ -19,7 +23,7 @@ function Login({ currentUser, setCurrentUser}) {
             setCurrentUser(data.user);
             localStorage.setItem("token", data.token);
             setLogin({
-                email: "", password: "", name: "", verify: ""
+                email: "", password: ""
             })
         })
         .catch(data => {
@@ -34,7 +38,7 @@ function Login({ currentUser, setCurrentUser}) {
         .then(data => { 
             setCurrentUser(data.user);
             localStorage.setItem("token", data.token);
-            setLogin({
+            setSignup({
                 email: "", password: "", name: "", verify: ""
             })
         })
@@ -49,7 +53,7 @@ function Login({ currentUser, setCurrentUser}) {
             <h1> Login </h1>
 
             <form onSubmit={handleLogin}>
-                <label className=""> Email Address </label>
+                <label> Email Address </label>
                 <input 
                     placeholder="Enter email address"
                     className="input"
@@ -74,6 +78,59 @@ function Login({ currentUser, setCurrentUser}) {
                     className="button"
                     type="submit"
                 > Log in </button>
+            </form>
+
+            <h1> Signup </h1>
+
+            <form onSubmit={handleSignup}>
+                <label> Name </label>
+                <input 
+                    placeholder="Enter name"
+                    className="input"
+                    type="text"
+                    name="name"
+                    value={signup.name}
+                    onChange={(e) => setLogin({
+                        ...login, [e.target.name]: e.target.value})}
+                />
+
+                <label> Email Address </label>
+                <input 
+                    placeholder="Enter email address"
+                    className="input"
+                    type="text"
+                    name="email"
+                    value={signup.email}
+                    onChange={(e) => setLogin({
+                        ...login, [e.target.name]: e.target.value})}
+                />
+
+                <label> Password </label>
+                <input 
+                    placeholder="Enter password"
+                    className="input"
+                    type="password"
+                    name="password"
+                    value={signup.password}
+                    onChange={(e) => setLogin({
+                        ...login, [e.target.name]: e.target.value})}
+                />
+
+                <label> Verify Password </label>
+                <input 
+                    placeholder="Verify your password"
+                    className="input"
+                    type="password"
+                    name="verify"
+                    value={signup.verify}
+                    onChange={(e) => setLogin({
+                        ...login, [e.target.name]: e.target.value})}
+                />
+
+                <button
+                    className="button"
+                    type="submit"
+                > Sign up </button>
             </form>
         </div>
     )
